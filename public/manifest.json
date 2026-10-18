@@ -1,0 +1,50 @@
+{
+  "name": "نو اهمال | دستیار ضد اهمال‌کاری و مدیریت زمان",
+  "short_name": "نو اهمال",
+  "description": "اپلیکیشن هوشمند مدیریت زمان و درمان قطعی اهمال‌کاری بر پایه روانشناسی رفتاری و تمرکز بدون سرزنش",
+  "start_url": "/#app",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#10b981",
+  "orientation": "portrait",
+  "dir": "rtl",
+  "lang": "fa",
+  "categories": ["productivity", "lifestyle", "education"],
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "قورباغه روز",
+      "short_name": "قورباغه",
+      "description": "مشاهده و شروع مهم‌ترین کار روز",
+      "url": "/#app",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" }]
+    },
+    {
+      "name": "تایمر پرتاب ۵ دقیقه‌ای",
+      "short_name": "پرتاب",
+      "description": "شروع فوری تمرکز ۵ دقیقه‌ای بدون بهانه",
+      "url": "/#app",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" }]
+    }
+  ]
+}

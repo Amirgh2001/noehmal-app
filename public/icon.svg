@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+
+    <!-- Kinetic Arc Gradient (Noon Bowl) -->
+    <linearGradient id="arcGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="45%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#34d399" />
+    </linearGradient>
+
+    <!-- Outer Refractive Border Gradient -->
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.6" />
+      <stop offset="50%" stop-color="#10b981" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.05" />
+    </linearGradient>
+
+    <!-- Star Core Gradient -->
+    <radialGradient id="starGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fffbeb" />
+      <stop offset="40%" stop-color="#fbbf24" />
+      <stop offset="85%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#d97706" />
+    </radialGradient>
+
+    <!-- Glow Filter -->
+    <filter id="emeraldGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="16" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="starGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="12" result="glow" />
+      <feComposite in="SourceGraphic" in2="glow" operator="over" />
+    </filter>
+
+    <!-- Drop Shadow for Arc -->
+    <filter id="arcShadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#10b981" flood-opacity="0.35" />
+    </filter>
+  </defs>
+
+  <!-- iOS Squircle Shape Outer Frame -->
+  <rect x="8" y="8" width="496" height="496" rx="112" fill="url(#bgGrad)" stroke="url(#borderGrad)" stroke-width="4" />
+
+  <!-- Ambient Light Reflection in Center -->
+  <circle cx="256" cy="256" r="170" fill="#10b981" opacity="0.07" filter="url(#emeraldGlow)" />
+  <circle cx="256" cy="180" r="80" fill="#fbbf24" opacity="0.08" filter="url(#starGlow)" />
+
+  <!-- Subtle Concentric Focus Rings in Background -->
+  <circle cx="256" cy="270" r="145" fill="none" stroke="#334155" stroke-width="1.5" stroke-dasharray="6 8" opacity="0.4" />
+  <circle cx="256" cy="270" r="105" fill="none" stroke="#334155" stroke-width="1.5" stroke-dasharray="4 6" opacity="0.3" />
+
+  <!-- The Kinetic Noon Bowl "ن" (Arc of Momentum & Focus) -->
+  <path
+    d="M 125 210 C 120 365, 392 365, 387 210 C 385 198, 366 198, 364 210 C 358 325, 154 325, 148 210 C 146 198, 127 198, 125 210 Z"
+    fill="url(#arcGrad)"
+    filter="url(#arcShadow)"
+  />
+
+  <!-- Subtle highlight rim along the top inner edge of the bowl -->
+  <path
+    d="M 148 215 C 160 315, 352 315, 364 215"
+    fill="none"
+    stroke="#ffffff"
+    stroke-width="5"
+    stroke-linecap="round"
+    opacity="0.4"
+  />
+
+  <!-- Left & Right terminal accents (speed dots on tips) -->
+  <circle cx="136.5" cy="205" r="10" fill="#06b6d4" filter="url(#emeraldGlow)" />
+  <circle cx="375.5" cy="205" r="10" fill="#34d399" filter="url(#emeraldGlow)" />
+
+  <!-- The Activation Spark: Nucleus Dot of "ن" (Symbolizing The 2-Minute Spark) -->
+  <g transform="translate(256, 195)" filter="url(#starGlow)">
+    <!-- Outer Golden Glow Ring -->
+    <circle cx="0" cy="0" r="32" fill="#fbbf24" opacity="0.2" filter="url(#emeraldGlow)" />
+    
+    <!-- Dynamic 4-Point Star -->
+    <path
+      d="M 0 -36 Q 0 -6 30 0 Q 0 6 0 36 Q 0 6 -30 0 Q 0 -6 0 -36 Z"
+      fill="url(#starGrad)"
+    />
+
+    <!-- Diagonal Micro-Sparks -->
+    <path
+      d="M -16 -16 Q 0 0 16 16 M 16 -16 Q 0 0 -16 16"
+      stroke="#fffbeb"
+      stroke-width="3"
+      stroke-linecap="round"
+      opacity="0.8"
+    />
+
+    <!-- Brilliant Core Center -->
+    <circle cx="0" cy="0" r="8" fill="#ffffff" />
+  </g>
+
+  <!-- Momentum Tick Marks around outer perimeter (Clock & Rhythm metaphor) -->
+  <line x1="256" y1="42" x2="256" y2="56" stroke="#10b981" stroke-width="4" stroke-linecap="round" opacity="0.7" />
+  <line x1="256" y1="456" x2="256" y2="470" stroke="#334155" stroke-width="3" stroke-linecap="round" opacity="0.5" />
+  <line x1="42" y1="256" x2="56" y2="256" stroke="#334155" stroke-width="3" stroke-linecap="round" opacity="0.5" />
+  <line x1="456" y1="256" x2="470" y2="256" stroke="#334155" stroke-width="3" stroke-linecap="round" opacity="0.5" />
+</svg>
